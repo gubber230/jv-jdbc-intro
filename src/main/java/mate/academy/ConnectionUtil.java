@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
-import mate.academy.exeption.DataProcessingException;
+import mate.academy.exception.DataProcessingException;
 
 public class ConnectionUtil {
     private static final String DB_URL = "jdbc:mysql://localhost:3306/init_db?serverTimezone=UTC";

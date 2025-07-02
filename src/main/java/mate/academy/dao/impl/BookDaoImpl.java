@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 import mate.academy.ConnectionUtil;
 import mate.academy.dao.BookDao;
-import mate.academy.exeption.DataProcessingException;
+import mate.academy.exception.DataProcessingException;
 import mate.academy.model.Book;
 
 public class BookDaoImpl implements BookDao {
@@ -112,7 +112,7 @@ public class BookDaoImpl implements BookDao {
 
             int affectedRows = statement.executeUpdate();
 
-            return affectedRows < 1;
+            return affectedRows != 0;
         } catch (SQLException e) {
             throw new DataProcessingException("Не можу видалити книгу за ID: " + id, e);
         }
