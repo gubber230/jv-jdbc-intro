@@ -114,7 +114,7 @@ public class BookDaoImpl implements BookDao {
 
             int affectedRows = statement.executeUpdate();
 
-            return affectedRows != 0;
+            return affectedRows > 0;
         } catch (SQLException e) {
             throw new DataProcessingException("Не можу видалити книгу за ID: " + id, e);
         }
