@@ -11,8 +11,10 @@ import java.util.Optional;
 import mate.academy.ConnectionUtil;
 import mate.academy.dao.BookDao;
 import mate.academy.exception.DataProcessingException;
+import mate.academy.lib.Dao;
 import mate.academy.model.Book;
 
+@Dao
 public class BookDaoImpl implements BookDao {
     @Override
     public Book create(Book book) {
